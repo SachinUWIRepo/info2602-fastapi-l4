@@ -6,9 +6,10 @@ from datetime import timedelta, datetime, timezone
 from app.database import SessionDep
 from fastapi.security import OAuth2PasswordBearer
 from typing import Annotated
-from fastapi import Depends, HTTPException, status
+from fastapi import Depends, HTTPException, status, APIRouter
 import jwt
 from jwt.exceptions import InvalidTokenError
+from fastapi.security import OAuth2PasswordRequestForm
 
 
 SECRET_KEY = "ThisIsAnExampleOfWhatNotToUseAsTheSecretKeyIRL"
